@@ -16,6 +16,6 @@ public class Main {
     else {
       System.out.println("There is no such appartment");
     }
-    	scan.close();
+      scan.close();
     }
 }
