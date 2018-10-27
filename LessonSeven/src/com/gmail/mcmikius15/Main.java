@@ -10,7 +10,7 @@ public class Main {
 		int c = 5;
 		int d = -1;
 		
-		int e = sum(c, d) + 7;
+		int e = sum(c, d) + 7 + sum(1, 2, 3);
 		
 		System.out.println(e);
                 
@@ -20,8 +20,23 @@ public class Main {
 
 	}
 	
+        /**
+         * 
+         * Calculet sum two integer values.
+         * 
+         * @param a <code> int </code> First Integer number
+         * @param b <code> int </code> Second Integer number
+         * @return <code> int </code> returm sum first and second numbers
+         * @author Michail_Bondarenko
+         */
+        
 	public static int sum(int a, int b) {
 		int summa = a + b;
+		return summa;
+	}
+        
+        public static int sum(int a, int b, int c) {
+		int summa = a + b + c;
 		return summa;
 	}
         
