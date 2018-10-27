@@ -17,7 +17,14 @@ public class Main {
 		System.out.println("Input the third side of a triangle");
 		double c = scan.nextDouble();
 
+		/*
 		if ((a + b) > c && (b + c) > a) {
+			System.out.println("This triangle exist");
+		} else {
+			System.out.println("This triangle exists does not exist");
+		}
+		*/
+		if ((a + b) > c && (b + c) > a && (a + c) > b) {
 			System.out.println("This triangle exist");
 		} else {
 			System.out.println("This triangle exists does not exist");
