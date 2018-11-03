@@ -5,6 +5,11 @@
  */
 package com.gmail.mcmikius15;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
 /**
  *
  * @author michailbondarenko
@@ -12,10 +17,33 @@ package com.gmail.mcmikius15;
 public class Main {
     
 public static void main(String[] args) {
-    int[] a = new int[] {1, 3, 5};
-    System.out.println(Arrays.toString(a));
-    swap(a);
-    System.out.println(Arrays.toString(a));
+    
+    Date date = new Date();
+    SimpleDateFormat sdfOne = new SimpleDateFormat("'Today is 'G y MMMM ww Z");
+    SimpleDateFormat sdfTwo = new SimpleDateFormat("dd:MM:yyyy");
+    
+    String myDate = "15:07:1987";
+    
+    try {
+        date = sdfTwo.parse(myDate);
+        
+    } catch (ParseException e) {
+        
+        e.printStackTrace();
+    
+    }
+    
+    
+    
+    String result = sdfOne.format(date);
+    
+    System.out.println(result);
+    
+    result = sdfTwo.format(date);
+    
+    System.out.println(result);
+    
+    System.out.println(date.getTime());
     }
 
 
